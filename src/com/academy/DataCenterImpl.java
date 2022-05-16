@@ -110,23 +110,7 @@ public class DataCenterImpl implements DataCenter {
     @Override
     public Integer teacherMostStudents() {
 
-        List<Teacher> teachers = new ArrayList<>();
-        int countStudent=0;
-        for (Course course : courses) {
-            if (course.getNameCourse().equals(NameCourseEnum.BASH)) {
-                teachers.add(course.getTeacher());
-               countStudent +=course.getStudent().size();
-            }
-            if (course.getNameCourse().equals(NameCourseEnum.HASKELL)) {
-                teachers.add(course.getTeacher());
-                countStudent +=course.getStudent().size();
-            }
-            if (course.getNameCourse().equals(NameCourseEnum.HAMILTON_C_SHELL)) {
-                teachers.add(course.getTeacher());
-                countStudent +=course.getStudent().size();
-            }
-        }
-        return countStudent;
+        return null;
     }
 
     @Override
