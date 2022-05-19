@@ -1,5 +1,9 @@
 package com.academy;
 
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 public interface DataCenter {
 
     Double findTopStudent();
@@ -10,7 +14,7 @@ public interface DataCenter {
 
     NameCourseEnum courseMaxAvgScore();
 
-    Integer teacherMostStudents();
+    String teacherMostStudents();
 
     Integer teacherBiggestSalary();
 

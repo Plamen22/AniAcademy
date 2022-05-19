@@ -1,14 +1,13 @@
 package com.academy;
 
 public class Teacher {
+
     private String nameTeacher;
     private int salary;
-
 
     public Teacher(String nameTeacher, int salary) {
         this.nameTeacher = nameTeacher;
         this.salary = salary;
-
     }
 
     public int getSalary() {

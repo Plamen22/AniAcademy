@@ -108,9 +108,34 @@ public class DataCenterImpl implements DataCenter {
     }
 
     @Override
-    public Integer teacherMostStudents() {
 
-        return null;
+    public String teacherMostStudents() {
+        Set<String> teacher1Students = new LinkedHashSet<>();
+        Set<String> teacher2Students = new LinkedHashSet<>();
+        String result = null;
+        for (Course course : courses) {
+            if (course.getNameCourse().equals(NameCourseEnum.BASH)) {
+                for (Student i : courseStudentBash) {
+                    teacher1Students.add(i.getNameStudent());
+                }
+            }
+            if (course.getNameCourse().equals(NameCourseEnum.HASKELL)) {
+                for (Student i : courseStudentHaskell) {
+                    teacher1Students.add(i.getNameStudent());
+                }
+            }
+            if (course.getNameCourse().equals(NameCourseEnum.HAMILTON_C_SHELL)) {
+                for (Student i : courseStudentHamilton) {
+                    teacher2Students.add(i.getNameStudent());
+                }
+            }
+            if (teacher1Students.size() > teacher2Students.size()) {
+                result = "Teacher1 with total of " + teacher1Students.size() + " students";
+            } else {
+                result = "Teacher2 with total of " + teacher2Students.size() + " students";
+            }
+        }
+        return result;
     }
 
     @Override
